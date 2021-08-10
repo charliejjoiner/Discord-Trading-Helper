@@ -18,6 +18,6 @@ module.exports = {
 
         if(!args[0]) return message.reply('Please enter an amount to convert.');
         else if(isNaN(args[0])) return message.reply('Please enter a real number!');
-        else return message.channel.send(rmbval + '¥ is worth £' + gbpval);
+        else return message.reply(rmbval + '¥ is worth £' + gbpval);
     },
 };

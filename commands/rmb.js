@@ -1,7 +1,7 @@
 module.exports = {
     name: 'rmb',
     description: 'replies with the conversion of rmb to GBP',
-    execute(client, message, args) {
+    execute(client, messageCreate, args) {
         const exchange = 0.111415;
         const rmbval = args[0];
         const gbpval = roundTo((rmbval * exchange), 2);
@@ -16,8 +16,8 @@ module.exports = {
             return +(test.toFixed(digits));
           }
 
-        if(!args[0]) return message.reply('Please enter an amount to convert.');
-        else if(isNaN(args[0])) return message.reply('Please enter a real number!');
-        else return message.reply(rmbval + '¥ is worth £' + gbpval);
+        if(!args[0]) return messageCreate.reply('Please enter an amount to convert.');
+        else if(isNaN(args[0])) return messageCreate.reply('Please enter a real number!');
+        else return messageCreate.reply(rmbval + '¥ is worth £' + gbpval);
     },
 };

@@ -1,3 +1,3 @@
 module.exports = () => {
-    console.log('Ready! Logged in as CSBot');
+    console.log('Ready! Logged in.');
 };

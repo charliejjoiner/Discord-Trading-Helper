@@ -2,7 +2,7 @@ module.exports = {
     name: 'rmb',
     description: 'replies with the conversion of rmb to GBP',
     execute(client, messageCreate, args) {
-        const exchange = 0.111415;
+        const exchange = 0.112893;
         const rmbval = args[0];
         const gbpval = roundTo((rmbval * exchange), 2);
 
